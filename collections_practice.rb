@@ -24,7 +24,12 @@ def swap_elements(array)
 end
 
 def reverse_array(array)
-  array.reverse
+  array.each_with_index do |item, index|
+    new_element = array[array.size-index-1]
+    array[array.size-index-1] = array[index]
+    array[index] = new_element
+    break if index>=(array.size/2 -1)
+  end
 end
 
 def kesha_maker(array)
