@@ -30,6 +30,7 @@ def reverse_array(array)
     array[index] = new_element
     break if index>=(array.size/2 -1)
   end
+  array
 end
 
 def kesha_maker(array)
